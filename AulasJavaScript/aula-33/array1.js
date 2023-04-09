@@ -24,7 +24,7 @@ console.log(tamanho);
 
 //Remover Elementos
 //pop
-const ultimoElemento = arr.pop();
+let ultimoElemento = arr.pop();
 console.log(arr);
 console.log(ultimoElemento);
 
@@ -50,3 +50,19 @@ const outros = arr.slice(-4);
 console.log(arr);
 console.log(hobbits);
 console.log(outros);
+
+//concat
+const sociedade = hobbits.concat(outros, "Boromir");
+console.log(sociedade);
+
+//Substituição de elementos
+//splice
+const elemntosRemovidos = sociedade.splice(indice, 1, "Gandalf, O cinzento");
+console.log(sociedade);
+console.log(elemntosRemovidos);
+
+//Iterar sobre os Elementos
+for (let i = 0; i < sociedade.length; i++) {
+  const elemento = sociedade[i];
+  console.log(elemento + " se encontra na posição " + i);
+}
