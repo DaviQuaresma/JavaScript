@@ -9,3 +9,5 @@ listaDeCompras[5] = "Batata";
 console.log(listaDeCompras);
 
 console.log(listaDeCompras[4]);
+
+
