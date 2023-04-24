@@ -17,7 +17,7 @@ console.log(calcular(8, 4, function(x, y){
 }))
 
 //Exemplo da vida real
-function exibitElemento(elemento, indice, array){
+function exibirElemento(elemento, indice, array){
     console.log({
         elemento,
         indice,
@@ -29,10 +29,10 @@ function exibitElemento(elemento, indice, array){
 const lista = ["Maça","Banana","Laranja","Limão"]
 
 for(let i = 0; i < lista.length; i++){
-    exibitElemento(lista[i], i, lista)
+    exibirElemento(lista[i], i, lista)
 }
 
-lista.forEach(exibitElemento)
+lista.forEach(exibirElemento)
 
 //exemplo com função anonima
 lista.forEach( function( elemento, indice, array){
