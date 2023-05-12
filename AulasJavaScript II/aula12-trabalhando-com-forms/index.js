@@ -2,7 +2,9 @@ const form = document.getElementById("orderForm")
 
 form.addEventListener("submit", function (ev) {
   ev.preventDefault()
-
+  /* Agora vou selecionar pelo QuerySelector que é referenciado igual ao CSS, pegamos primeiro o seletor no HTML
+  que nesse caso é o INPUT, e depois pegar dentro dele a referencia [name = 'name'] para trabalhar nele, e o 
+  .value é para puxar tambem o valor que será setado nele*/
   const name = document.querySelector("input[name='name']").value
   const address = document.querySelector("input[name='address']").value
   const breadType = document.querySelector("select[name='breadType']").value
