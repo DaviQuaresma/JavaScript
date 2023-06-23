@@ -1,11 +1,19 @@
 const dayjs = require("dayjs")
 
-const birth = '2002-02-09'
+function birthday(date){
+    const birthday = dayjs(date)
+    const today = dayjs()
 
+    const ageInYears = today.diff(birthday, 'year')
+    const nextBirthday = birthday.add(ageInYears + 1, 'year')
+    const daysToNextBirthday = nextBirthday.diff(today, 'day') + 1
 
+    console.log(`Idade: ${ageInYears}`)
+    console.log(`Proximo aniversario: ${nextBirthday.format("DD/MM/YYYY")}`)
+    console.log(`Dias até completar ${ageInYears + 1} anos ${daysToNextBirthday}`)
+}
 
-
-
+birthday("2002-02-09")
 
 /*Você deverá criar uma função javascript que recebe como parâmetro a data de nascimento de uma pessoa no 
 formato string e mostre no terminal a idade dessa pessoa no dia atual, sua próxima data de aniversário no 
